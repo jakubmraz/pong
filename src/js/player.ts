@@ -7,9 +7,11 @@ export class Player implements GameObject
     public position:Vector 
     private gameEngine:GameEngine;
 
-    private speed:number = 40;
+    private speed:number = 120;
     public height:number = 30;
     public width:number =10;
+
+    public static score:number = 0;
 
     constructor(position:Vector, gameEngine:GameEngine)
     {
@@ -35,6 +37,6 @@ export class Player implements GameObject
     }
 
     onColliosion(other: GameObject): void {
-        // not doing anything at the moment...
+        Player.score++;
     }
 }

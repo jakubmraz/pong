@@ -3,6 +3,7 @@ import { Framerate } from "./framerate";
 import { Vector } from "./vector";
 import { Player } from "./player";
 import { Ball } from "./ball";
+import { Score } from './score';
 
 /*
     THis is the main PONG GAME script
@@ -48,6 +49,7 @@ export class GameEngine
 
         //ceate gameobjects
         this.objects.push(new Framerate(new Vector(10,10)));
+        this.objects.push(new Score(new Vector(10, this.canvasHeight-10)))
         
         this.player1 = new Player(new Vector(20,10), this);
         this.objects.push(this.player1);

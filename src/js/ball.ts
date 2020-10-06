@@ -9,7 +9,7 @@ export class Ball implements GameObject
     private gameEngine:GameEngine;
     public position:Vector;
     private direction:Vector;
-    private speed:number = 60;
+    private speed:number = 160;
     private size:number= 10;
 
     constructor (position:Vector, gameEngine:GameEngine)
